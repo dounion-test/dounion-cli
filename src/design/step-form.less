@@ -1,0 +1,64 @@
+@import 'transition/index.less';
+@import 'var/index.less';
+@import 'public.less';
+@import 'ant/index.less';
+@import './theme.less';
+
+.expert-steps {
+  background: #eaf6ff;
+  padding: 10px 12%;
+  :deep(.ant-steps-item-wait),
+  :deep(.ant-steps-item-process) {
+    .ant-steps-item-container .ant-steps-item-content {
+      .ant-steps-item-title {
+        color: rgba(0, 0, 0, 0.85);
+        &::after {
+          background-color: #999;
+        }
+      }
+    }
+  }
+
+  .ant-steps-item-active {
+    .ant-steps-icon-dot {
+      background: @primary-color !important;
+    }
+  }
+}
+
+.step-form-wrap{
+  :deep(.ant-form-item-label) {
+    background: #fafafa;
+    padding: 8px;
+    border-bottom: 1px solid @primary-color;
+    margin-bottom: 20px;
+  }
+  
+  :deep(.ant-tag-checkable) {
+    border: 1px solid #d9d9d9;
+    margin-top: 10px;
+    margin-right: 15px;
+  }
+
+  :deep(.ant-form-item-control-input){
+    min-height: 1px;
+  }
+}
+.form-button{
+  width: 90%;
+}
+
+[data-theme='dark'] {
+  .step-form-wrap{
+    :deep(.ant-form-item-label) {
+      background: #2d2d2d;
+    }
+  }
+  .expert-steps {
+    background: #282727 !important;
+    :deep(.ant-steps-item-title) {
+      color: rgba(255,255,255,.65) !important;
+    }
+  }
+  
+}

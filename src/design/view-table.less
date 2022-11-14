@@ -1,0 +1,80 @@
+@import (reference) 'color.less';
+@import (reference) 'var/index.less';
+@alias: ~'@{namespace}';
+
+.approval-work-flow {
+  width: 80%;
+  min-width: 1000px;
+  padding: 15px 0;
+  .hd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h2 {
+    flex: 1;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+  }
+  :deep(.ant-table .ant-table-cell) {
+    font-size: 16px;
+  }
+}
+
+.survey-list {
+  padding: 0 6px;
+  :deep(.p-2),
+  :deep(.ant-table-wrapper) {
+    padding: 0;
+  }
+  :deep(.ant-table-wrapper) {
+    // margin-top: 10px;
+  }
+  :deep(.@{alias}) {
+    &-basic-title-normal {
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+}
+
+.survey-table {
+  margin-top: 20px;
+  padding: 6px;
+  :deep(.ant-btn) {
+    font-size: 14px;
+    padding: 4px 15px;
+  }
+}
+.survey-explain {
+  padding: 0 26px;
+  font-size: 16px;
+  h3 {
+    padding-bottom: 5px;
+  }
+  li {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1537px) {
+  .approval-work-flow {
+    h2 {
+      font-size: 22px;
+    }
+    :deep(.ant-table .ant-table-cell) {
+      font-size: 14px;
+    }
+  }
+  .survey-list {
+    :deep(.@{alias}) {
+      &-basic-title-normal {
+        font-size: 14px;
+      }
+    }
+  }
+  .survey-explain {
+    font-size: 14px;
+  }
+}

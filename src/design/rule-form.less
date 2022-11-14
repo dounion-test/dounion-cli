@@ -1,0 +1,34 @@
+@import 'transition/index.less';
+@import 'var/index.less';
+@import 'public.less';
+@import 'ant/index.less';
+@import './theme.less';
+
+.rule-form-wrap{
+  .title-bar{
+    position: relative;
+    font-size: 18px;
+    padding-left: 16px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      height: 18px;
+      border-left: 8px solid @primary-color;
+    }
+  }
+  .form-item {
+    margin-top: 10px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .nav-title {
+    background: #fafafa;
+    padding: 8px;
+    border-bottom: 1px solid #0960bd;
+    margin-bottom: 20px;
+  }
+}

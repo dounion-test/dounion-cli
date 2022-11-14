@@ -1,0 +1,54 @@
+@tree-prefix-cls: ~'@{namespace}-tree';
+
+.@{tree-prefix-cls} {
+  background-color: @component-background;
+
+  .ant-tree-node-content-wrapper {
+    position: relative;
+
+    .ant-tree-title {
+      // 如果需要横向滚动条隐藏前3项，放开fit-content
+      // width: fit-content;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-right: 10px;
+
+    &:hover {
+      .@{tree-prefix-cls}__action {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+
+  &__actions {
+    position: absolute;
+    //top: 2px;
+    right: 3px;
+    display: flex;
+  }
+
+  &__action {
+    margin-left: 4px;
+    visibility: hidden;
+  }
+
+  &-header {
+    border-bottom: 1px solid @border-color-base;
+  }
+}

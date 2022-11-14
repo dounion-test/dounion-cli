@@ -1,0 +1,161 @@
+@import 'transition/index.less';
+@import 'var/index.less';
+@import 'public.less';
+@import 'ant/index.less';
+@import './theme.less';
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  img {
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+
+  :deep(.ant-avatar-string) {
+    position: inherit;
+    left: 0;
+    line-height: 1 !important;
+    transform: none !important;
+  }
+}
+
+.user-info{
+  strong{
+    font-size: 30px;
+  }
+  .post{
+    font-size: 14px;
+  }
+}
+
+.button-bar{
+  .ant-btn{
+    display: inline-flex;
+    align-items: center;
+  }
+}
+.person-territory {
+  :deep(.ant-list-item) {
+    border: 0 none;
+  }
+}
+
+.title-bar {
+  position: relative;
+  font-size: 18px;
+  &::before {
+    content: '';
+    position: absolute !important;
+    left: 0;
+    transform: translateY(-50%) !important;
+    height: 18px;
+    border-left: 8px solid @primary-color;
+  }
+}
+
+.annex-wrap{
+  border: 1px solid #d9d9d9;
+}
+.annex-pic {
+  img {
+    width: 100%;
+    height: 140px;
+  }
+}
+.no-pic{
+  height: 140px;
+  color: #666;
+  background: #c7c7c7;
+  opacity: 0.2;
+}
+
+.person-info {
+  .desc{
+    font-size: 14px;
+  }
+  .bd {
+    max-width: 800px;
+    .ant-col {
+      padding: 0 !important;
+    }
+    :deep(.ant-divider-dashed) {
+      margin: 5px 0;
+    }
+  }
+}
+
+.title-info{
+  h2{
+    font-size: 16px;
+  }
+  p{
+    color: #666;
+  }
+}
+.view-item {
+  .label {
+    display: inline-block;
+    width: 72px;
+  }
+}
+.downlink {
+  li {
+    padding-bottom: 10px;
+    cursor: pointer;
+    a {
+      margin-left: 10px;
+      color: @primary-color;
+    }
+    &:hover {
+      color: @primary-color;
+    }
+  }
+}
+
+.list-box {
+  padding: 0 10px;
+  :deep(.ant-list-item){
+    padding: 3px 0;
+    border: 0 none;
+  }
+  :deep(.ant-list-header){
+    font-size: 16px;
+    border: 0 none;
+  }
+}
+
+.other-info{
+  font-size: 14px;
+  :deep(.ant-list){
+    font-size: 14px;
+  }
+}
+
+:deep(.ant-list-empty-text){
+  padding: 0;
+}
+[data-theme="dark"]{
+  .annex-wrap{
+    border-color: #303030;
+  }
+  .view-item .label{
+    color: rgba(255, 255, 255, 0.65);
+  }
+}
+@media screen and (max-width: 1537px) {
+  .view-item {
+    .label {
+      width: 63px;
+    }
+  }
+  .user-info{
+    strong{
+      font-size: 24px;
+    }
+  }
+}
